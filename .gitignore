@@ -1,0 +1,6 @@
+node_modules/
+.env
+.claude/
+.tmp/
+temporary screenshots/
+www.edmiston.com_*.png
