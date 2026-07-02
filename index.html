@@ -1738,7 +1738,11 @@
         </div>
         <div class="form-card reveal reveal-delay-2">
           <h3 class="form-title">Begin Your Charter</h3>
-          <form id="enquiry-form" novalidate>
+          <form id="enquiry-form" novalidate action="https://formsubmit.co/william.qld.australia@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Charter Enquiry — Pazienza" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First Name</label>
@@ -2047,14 +2051,32 @@
     );
     reveals.forEach(el => observer.observe(el));
 
-    // Form submission (placeholder)
+    // Form submission — delivers via FormSubmit to william.qld.australia@gmail.com only
     document.getElementById('enquiry-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      const btn = this.querySelector('.form-submit');
-      btn.textContent = 'Enquiry Sent — We\'ll be in touch shortly.';
-      btn.style.background = 'rgba(184,151,90,0.3)';
-      btn.style.color = 'var(--gold)';
+      const form = this;
+      const btn = form.querySelector('.form-submit');
+      const originalText = btn.textContent;
       btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      fetch('https://formsubmit.co/ajax/william.qld.australia@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+        .then(res => {
+          if (!res.ok) throw new Error('Request failed');
+          btn.textContent = 'Enquiry Sent — We\'ll be in touch shortly.';
+          btn.style.background = 'rgba(184,151,90,0.3)';
+          btn.style.color = 'var(--gold)';
+          form.reset();
+        })
+        .catch(() => {
+          btn.textContent = 'Something went wrong — please try again';
+          btn.disabled = false;
+          setTimeout(() => { btn.textContent = originalText; }, 3500);
+        });
     });
 
     // Smooth anchor scroll with a slower, custom-eased duration
