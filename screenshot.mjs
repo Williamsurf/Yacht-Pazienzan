@@ -16,7 +16,7 @@ const browser = await puppeteer.launch();
 const page = await browser.newPage();
 await page.setViewport({ width: 1440, height: 900 });
 await page.goto(url, { waitUntil: 'networkidle2' });
-await page.waitForTimeout(800); // allow fonts and animations to settle
+await new Promise(r => setTimeout(r, 800)); // allow fonts and animations to settle
 await page.screenshot({ path: outPath, fullPage: true });
 await browser.close();
 

@@ -1,0 +1,25 @@
+{
+  "name": "claude-code-website-building",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Williamsurf/Yacht-Pazienzan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Williamsurf/Yacht-Pazienzan/issues"
+  },
+  "homepage": "https://github.com/Williamsurf/Yacht-Pazienzan#readme",
+  "dependencies": {
+    "puppeteer": "^25.3.0",
+    "serve": "^14.2.6"
+  }
+}
