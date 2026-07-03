@@ -1188,7 +1188,7 @@
     </nav>
     <div class="menu-footer">
       <a href="#contact"                      class="menu-footer-link">Contact</a>
-      <a href="mailto:yachtpazienza@gmail.com" class="menu-footer-link">yachtpazienza@gmail.com</a>
+      <a href="mailto:info@yachtpazienza.com" class="menu-footer-link">info@yachtpazienza.com</a>
       <a href="#about"                        class="menu-footer-link">About</a>
     </div>
   </div>
@@ -1732,13 +1732,13 @@
                 <path d="M3 4l6 5 6-5"/>
                 <rect x="2" y="3" width="14" height="12" rx="1"/>
               </svg>
-              yachtpazienza@gmail.com
+              info@yachtpazienza.com
             </div>
           </div>
         </div>
         <div class="form-card reveal reveal-delay-2">
           <h3 class="form-title">Begin Your Charter</h3>
-          <form id="enquiry-form" novalidate action="https://formsubmit.co/william.qld.australia@gmail.com" method="POST">
+          <form id="enquiry-form" novalidate action="https://formsubmit.co/info@yachtpazienza.com" method="POST">
             <input type="hidden" name="_subject" value="New Charter Enquiry — Pazienza" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
@@ -1974,7 +1974,7 @@
           <div class="footer-col-title">Contact</div>
           <div class="footer-contact-item">
             <div class="footer-contact-label">Charter Enquiries</div>
-            <div class="footer-contact-value">yachtpazienza@gmail.com</div>
+            <div class="footer-contact-value">info@yachtpazienza.com</div>
           </div>
           <div class="footer-contact-item">
             <div class="footer-contact-label">Phone</div>
@@ -2051,7 +2051,7 @@
     );
     reveals.forEach(el => observer.observe(el));
 
-    // Form submission — delivers via FormSubmit to william.qld.australia@gmail.com only
+    // Form submission — delivers via FormSubmit to info@yachtpazienza.com only
     document.getElementById('enquiry-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const form = this;
@@ -2060,7 +2060,7 @@
       btn.disabled = true;
       btn.textContent = 'Sending…';
 
-      fetch('https://formsubmit.co/ajax/william.qld.australia@gmail.com', {
+      fetch('https://formsubmit.co/ajax/info@yachtpazienza.com', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: new FormData(form)
