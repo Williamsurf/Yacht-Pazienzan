@@ -1192,7 +1192,7 @@
     </nav>
     <div class="menu-footer">
       <a href="#contact"                      class="menu-footer-link">Contact</a>
-      <a href="mailto:info@yachtpazienza.com" class="menu-footer-link">info@yachtpazienza.com</a>
+      <a href="mailto:yachtpazienza@gmail.com" class="menu-footer-link">yachtpazienza@gmail.com</a>
       <a href="#about"                        class="menu-footer-link">About</a>
     </div>
   </div>
@@ -1330,7 +1330,6 @@
           </svg>
         </div>
         <div class="exp-card-content">
-          <div class="exp-number">01</div>
           <h3 class="exp-card-title">Bespoke Itineraries</h3>
           <p class="exp-card-desc">
             Your captain and crew map every waypoint around what moves you!
@@ -1354,7 +1353,6 @@
           </svg>
         </div>
         <div class="exp-card-content">
-          <div class="exp-number">02</div>
           <h3 class="exp-card-title">Fine Dining at Sea</h3>
           <p class="exp-card-desc">
             Our private chef crafts menus celebrating Pacific produce, from fresh
@@ -1378,7 +1376,6 @@
           </svg>
         </div>
         <div class="exp-card-content">
-          <div class="exp-number">03</div>
           <h3 class="exp-card-title">Ocean Adventures</h3>
           <p class="exp-card-desc">
             Dive pristine reef systems, kayak through mangroves, kitesurf open water,
@@ -1736,13 +1733,13 @@
                 <path d="M3 4l6 5 6-5"/>
                 <rect x="2" y="3" width="14" height="12" rx="1"/>
               </svg>
-              info@yachtpazienza.com
+              yachtpazienza@gmail.com
             </div>
           </div>
         </div>
         <div class="form-card reveal reveal-delay-2">
           <h3 class="form-title">Begin Your Charter</h3>
-          <form id="enquiry-form" novalidate action="https://formsubmit.co/info@yachtpazienza.com" method="POST">
+          <form id="enquiry-form" novalidate action="https://formsubmit.co/yachtpazienza@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New Charter Enquiry — Pazienza" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
@@ -1978,7 +1975,7 @@
           <div class="footer-col-title">Contact</div>
           <div class="footer-contact-item">
             <div class="footer-contact-label">Charter Enquiries</div>
-            <div class="footer-contact-value">info@yachtpazienza.com</div>
+            <div class="footer-contact-value">yachtpazienza@gmail.com</div>
           </div>
           <div class="footer-contact-item">
             <div class="footer-contact-label">Phone</div>
@@ -2055,7 +2052,7 @@
     );
     reveals.forEach(el => observer.observe(el));
 
-    // Form submission — delivers via FormSubmit to info@yachtpazienza.com only
+    // Form submission — delivers via FormSubmit to yachtpazienza@gmail.com only
     document.getElementById('enquiry-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const form = this;
@@ -2064,7 +2061,7 @@
       btn.disabled = true;
       btn.textContent = 'Sending…';
 
-      fetch('https://formsubmit.co/ajax/info@yachtpazienza.com', {
+      fetch('https://formsubmit.co/ajax/yachtpazienza@gmail.com', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: new FormData(form)
