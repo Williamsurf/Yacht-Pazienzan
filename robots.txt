@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yachtpazienza.com/sitemap.xml
